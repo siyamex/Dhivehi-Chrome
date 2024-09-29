@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": " Dhivehi ",
+    "version": "1.2",
+    "description": "Changes fonts to Faruma and translates text to Dhivehi",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "host_permissions": [
+      "https://translate.googleapis.com/"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "css": ["styles.css"],
+        "js": ["content.js"]
+      }
+    ]
+  }
